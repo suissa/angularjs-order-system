@@ -1,0 +1,17 @@
+categories = [
+    {
+        id: 0,
+        name: 'tenis',
+        slug: 'tenis',
+    },
+    {
+        id: 1,
+        name: 'meia',
+        slug: 'meia',
+    },
+    {
+        id: 2,
+        name: 'cueca',
+        slug: 'cueca',
+    }
+]
