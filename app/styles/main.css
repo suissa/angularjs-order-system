@@ -1,0 +1,44 @@
+/* Search */
+div.search {
+    padding: 18px 0 0;
+}
+/* Search end */
+
+/* Product list */
+ul.product-list {
+    padding: 0 55px;
+}
+
+ul.product-list li {
+    list-style: none;
+    width: 220px;
+    padding: 10px;
+    margin: 10px;
+    float: left;
+    border: 1px solid #f2f2f2;
+    border-radius: 6px;
+}
+
+ul.product-list li div.product-holder {
+    text-align: left;    
+}
+
+ul.product-list li div.product-holder img {
+    margin-bottom: 10px;    
+}
+
+ul.product-list li div.product-holder div {
+    margin: 5px 0;    
+}
+
+ul.product-list li div.product-holder div .name a {}
+
+ul.product-list li div.product-holder div .text {
+    float: right;
+    color: #ccc;    
+}
+
+ul.product-list li div.product-holder p {
+    margin: 5px 0;
+}
+/* product list end */
