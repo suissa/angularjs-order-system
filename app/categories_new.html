@@ -1,0 +1,25 @@
+<article class="content-holder">
+
+  <div class="container">
+    <form  method="POST" name="categoryForm">
+        <div class="control-group" ng-class="{error: categoryForm.name.$invalid}">
+            <label>Name</label>
+            <input type="text" name="name" ng-model="category.name" required>
+            <span ng-show="categoryForm.name.$error.required" class="help-inline">
+Required Field</span>
+            
+        </div>
+        <div class="control-group" ng-class="{error: categoryForm.description.$invalid}">
+          <label>Description</label>
+            <input type="text" name="description" ng-model="category.description" required>
+            <span ng-show="categoryForm.description.$error.required" class="help-inline">
+Required Field</span>
+        </div>
+
+        <div class="actions">
+           <button ng-click="save()" ng-disabled="isClean() || categoryForm.$invalid"
+          class="btn btn-primary">Save</button>
+        </div>
+    </form>
+  </div>
+</article>

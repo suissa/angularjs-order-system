@@ -1,0 +1,31 @@
+<article class="content-holder">
+
+    <div class="container">
+        <div class="actions span12">
+            <div class="btn-control pull-right">
+                <a href="#/categories/new" class="btn"><i class="icon-plus"></i></a>
+            </div>
+        </div>
+        <ul class="category-list" ng-controller="CategoryListCtrl">
+            <li ng-repeat="category in categories | filter: query">
+                <div class="category-holder">
+
+                    <div>
+                        <span class="name">
+                            <a href="#">{{category.name}}</a>
+                        </span>
+                        
+                    </div>
+                    <p>
+                            {{category.description}}
+                    </p>
+                    <div class="btn-group pull-right">
+                        <a href="#/categories/edit/{{category._id.$oid}}" class="btn btn-small"><i class="icon-edit"></i></a>
+                        <a href="#/categories/" ng-click="category.destroy()" class="btn btn-small btn-danger"><i class="icon-remove"></i></a>
+                    </div>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+</article>
