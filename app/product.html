@@ -1,5 +1,10 @@
 <article class="content-holder">
     <div class="container">
+        <div class="actions span12">
+            <div class="btn-control pull-right">
+                <a href="#/products/new" class="btn"><i class="icon-plus"></i></a>
+            </div>
+        </div>
         <ul class="product-list" ng-controller="ProductListControl">
             <li ng-repeat="product in products | filter: query">
                 <div class="product-holder">

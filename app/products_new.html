@@ -1,0 +1,39 @@
+<article class="content-holder">
+
+  <div class="container">
+    <form  method="POST" name="productForm">
+        <div class="control-group" ng-class="{error: productForm.name.$invalid}">
+            <label>Name</label>
+            <input type="text" name="name" ng-model="product.name" required>
+            <span ng-show="productForm.name.$error.required" class="help-inline">
+Required Field</span>
+            
+        </div>
+        <div class="control-group" ng-class="{error: productForm.thumb.$invalid}">
+            <label>Image</label>
+            <input type="text" name="thumb" ng-model="cproduct.thumb" required>
+            <span ng-show="productForm.name.$error.required" class="help-inline">
+Required Field</span>
+            
+        </div>
+        <div class="control-group" ng-class="{error: productForm.price.$invalid}">
+            <label>Price</label>
+            <input type="text" name="price" ng-model="product.price" required>
+            <span ng-show="productForm.price.$error.required" class="help-inline">
+Required Field</span>
+            
+        </div>
+        <div class="control-group" ng-class="{error: productForm.details.$invalid}">
+          <label>Details</label>
+            <input type="text" name="description" ng-model="product.details" required>
+            <span ng-show="productForm.details.$error.required" class="help-inline">
+Required Field</span>
+        </div>
+
+        <div class="actions">
+           <button ng-click="save()" ng-disabled="isClean() || productForm.$invalid"
+          class="btn btn-primary">Save</button>
+        </div>
+    </form>
+  </div>
+</article>

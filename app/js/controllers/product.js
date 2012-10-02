@@ -12,3 +12,11 @@ var ProductListControl = function ProductListControl ( $scope, Product ) {
     $scope.products = Product.query();
 };
 
+function ProductCreateCtrl($scope, $location, Product) {
+  $scope.save = function() {
+    Product.save($scope.product, function(product) {
+      $location.path('/products/');
+    });
+  }
+}
+
