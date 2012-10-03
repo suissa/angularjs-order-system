@@ -11,8 +11,8 @@ Required Field</span>
         </div>
         <div class="control-group" ng-class="{error: productForm.thumb.$invalid}">
             <label>Image</label>
-            <input type="text" name="thumb" ng-model="cproduct.thumb" required>
-            <span ng-show="productForm.name.$error.required" class="help-inline">
+            <input type="text" name="thumb" ng-model="product.thumb" required>
+            <span ng-show="productForm.thumb.$error.required" class="help-inline">
 Required Field</span>
             
         </div>
@@ -27,6 +27,14 @@ Required Field</span>
           <label>Details</label>
             <input type="text" name="description" ng-model="product.details" required>
             <span ng-show="productForm.details.$error.required" class="help-inline">
+Required Field</span>
+        </div>
+        <div class="control-group" ng-class="{error: productForm.category_id.$invalid}">
+          <label>Categories</label>
+            <select name="category_id" ng-model="product.category_id" ng-controller="CategoryListCtrl" required>
+                <option ng-repeat="category in categories">{{category.name}}</option>
+            </select>
+            <span ng-show="productForm.category_id.$error.required" class="help-inline">
 Required Field</span>
         </div>
 
