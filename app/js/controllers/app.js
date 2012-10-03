@@ -8,5 +8,6 @@ angular.module('order', ['mongoCategories', 'mongoProducts']).
       when('/categories/edit/:categoryId', {templateUrl: 'categories_new.html', controller: CategoryEditCtrl}).
       when('/products', {templateUrl: 'product.html', controller: ProductListControl}).
       when('/products/new', {templateUrl: 'products_new.html', controller: ProductCreateCtrl}).
+
       otherwise({redirectTo: '/'});
 }]);
