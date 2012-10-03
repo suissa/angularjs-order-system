@@ -1,4 +1,4 @@
-products = [
+[
     {
 	    id: 0,
 		slug: 'nike-air',
