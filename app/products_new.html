@@ -32,7 +32,7 @@ Required Field</span>
         <div class="control-group" ng-class="{error: productForm.category_id.$invalid}">
           <label>Categories</label>
             <select name="category_id" ng-model="product.category_id" ng-controller="CategoryListCtrl" required>
-                <option ng-repeat="category in categories">{{category.name}}</option>
+                <option ng-repeat="category in categories" value="{{category._id.$oid}}">{{category.name}}</option>
             </select>
             <span ng-show="productForm.category_id.$error.required" class="help-inline">
 Required Field</span>
